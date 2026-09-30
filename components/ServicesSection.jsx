@@ -61,13 +61,13 @@ export const popularCabCards = [
   },
   {
     title: 'Dehradun to Kedarnath Yatra Taxi',
-    image: '/images/kedarnath_real.jpg',
+    image: '/images/kedarnath.jpg',
     desc: 'Dedicated AC mountain cabs to Sonprayag & Guptkashi for holy Kedarnath Temple darshan with experienced pahadi drivers.',
     dest: 'Kedarnath Yatra Cab Package',
   },
   {
     title: 'Dehradun to Dhanaulti & Kanatal Taxi',
-    image: '/images/dhanaulti.webp',
+    image: '/images/dhanaulti.jpg',
     desc: 'Scenic mountain cab ride to Eco Park Dhanaulti, Surkanda Devi Temple, and peaceful pine trails of Kanatal.',
     dest: 'Dhanaulti & Kanatal Tour',
   },

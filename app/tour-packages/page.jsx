@@ -23,7 +23,7 @@ export const holidayPackages = [
   {
     title: 'Dehradun to Dhanaulti & Snow Tour',
     badge: '2 Days / 1 Night',
-    image: '/images/mussoorie.jpg',
+    image: '/images/dhanaulti.jpg',
     points: ['SUV/Sedan cab for mountain terrain', 'Eco Park, Surkanda Devi Temple', 'Snow view point & apple orchards'],
     package: 'Dhanaulti Tour Package',
   },
