@@ -183,14 +183,23 @@ export default function BookingModal({ isOpen, onClose, defaultService = '' }) {
             />
           </div>
 
-          {/* Submit */}
-          <button
-            type="submit"
-            className="w-full bg-[#16A34A] hover:bg-[#15803D] text-white font-black py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-200 hover:scale-[1.01] shadow-lg shadow-green-600/30 text-sm"
-          >
-            <Send size={16} />
-            <span>Send Booking Request on WhatsApp</span>
-          </button>
+          {/* Action Buttons: WhatsApp & Direct Call */}
+          <div className="flex flex-col sm:flex-row gap-3 pt-2">
+            <button
+              type="submit"
+              className="flex-1 bg-[#16A34A] hover:bg-[#15803D] text-white font-black py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-200 hover:scale-[1.01] shadow-lg shadow-green-600/30 text-sm"
+            >
+              <Send size={16} />
+              <span>Send on WhatsApp</span>
+            </button>
+            <a
+              href="tel:7819909454"
+              className="flex-1 bg-red-600 hover:bg-red-700 text-white font-black py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-200 hover:scale-[1.01] shadow-lg shadow-red-600/30 text-sm text-center"
+            >
+              <Phone size={16} className="fill-white" />
+              <span>Direct Call: 78199 09454</span>
+            </a>
+          </div>
         </form>
       </div>
     </div>

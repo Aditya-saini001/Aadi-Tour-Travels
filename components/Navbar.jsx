@@ -79,15 +79,15 @@ export default function Navbar({ onOpenBooking }) {
             })}
           </nav>
 
-          {/* Right Glowing Book Now Button */}
+          {/* Right Glowing Call Now Button */}
           <div className="hidden sm:flex items-center gap-3">
-            <button
-              onClick={() => onOpenBooking ? onOpenBooking('General Booking') : window.location.href = '/contact'}
-              className="flex items-center gap-2 bg-gradient-to-r from-amber-500 via-amber-400 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-[#0F1E35] font-black text-sm px-6 py-2.5 rounded-full shadow-lg shadow-amber-500/40 hover:scale-105 transition-all duration-200"
+            <a
+              href="tel:7819909454"
+              className="flex items-center gap-2 bg-gradient-to-r from-red-600 via-red-500 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-black text-sm px-6 py-2.5 rounded-full shadow-lg shadow-red-600/40 hover:scale-105 transition-all duration-200"
             >
-              <Car size={16} />
-              <span>Book Now</span>
-            </button>
+              <Phone size={16} className="fill-white" />
+              <span>Call Now</span>
+            </a>
           </div>
 
           {/* Mobile Menu Toggle */}
