@@ -53,6 +53,42 @@ export const popularCabCards = [
     desc: 'Hassle-free one-way or round-trip commute with clean, AC cars and experienced hill and plain drivers.',
     dest: 'Saharanpur City & Station',
   },
+  {
+    title: 'Dehradun City & Sightseeing Taxi',
+    image: 'https://images.unsplash.com/photo-1596176530529-78163a4f7af2?q=80&w=800&auto=format&fit=crop',
+    desc: 'Explore FRI, Robber\'s Cave (Guchhupani), Sahastradhara, Tapkeshwar Mahadev, and Clock Tower with full-day local cabs.',
+    dest: 'Dehradun Full Day Local Sightseeing',
+  },
+  {
+    title: 'Dehradun to Kedarnath Yatra Taxi',
+    image: '/images/kedarnath.jpg',
+    desc: 'Dedicated AC mountain cabs to Sonprayag & Guptkashi for holy Kedarnath Temple darshan with experienced pahadi drivers.',
+    dest: 'Kedarnath Yatra Cab Package',
+  },
+  {
+    title: 'Dehradun to Dhanaulti & Kanatal Taxi',
+    image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop',
+    desc: 'Scenic mountain cab ride to Eco Park Dhanaulti, Surkanda Devi Temple, and peaceful pine apple orchards of Kanatal.',
+    dest: 'Dhanaulti & Kanatal Tour',
+  },
+  {
+    title: 'Dehradun to Chandigarh Cab Service',
+    image: 'https://images.unsplash.com/photo-1588095538353-b716edb119ff?q=80&w=800&auto=format&fit=crop',
+    desc: 'Direct one-way & round-trip highway taxi to Chandigarh, Mohali, Panchkula, and IXC Airport via smooth expressway.',
+    dest: 'Dehradun to Chandigarh Taxi',
+  },
+  {
+    title: 'Dehradun to Chakrata Hill Station Cab',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop',
+    desc: 'Visit offbeat mountain gem Chakrata, Tiger Falls, Chilmiri Neck, and Deoban with safe and powerful SUVs & sedans.',
+    dest: 'Chakrata Hill Tour',
+  },
+  {
+    title: 'Dehradun to Paonta Sahib Gurudwara Taxi',
+    image: 'https://images.unsplash.com/photo-1609825488888-3a766db05542?q=80&w=800&auto=format&fit=crop',
+    desc: 'Peaceful pilgrimage cab service for Paonta Sahib Gurudwara on the banks of River Yamuna, Dakpathar, and Vikasnagar.',
+    dest: 'Paonta Sahib Pilgrimage Cab',
+  },
 ]
 
 export default function ServicesSection({ onOpenBooking }) {
