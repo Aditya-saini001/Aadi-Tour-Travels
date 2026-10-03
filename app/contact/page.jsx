@@ -71,8 +71,8 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <p className="text-[11px] text-gray-400 uppercase font-bold">Email Support</p>
-                        <a href="mailto:aaditourandtravels@gmail.com" className="text-sm font-bold text-[#0F1E35] hover:text-blue-600 transition-colors">
-                          aaditourandtravels@gmail.com
+                        <a href="mailto:shivdarshantourtravels@gmail.com" className="text-sm font-bold text-[#0F1E35] hover:text-blue-600 transition-colors">
+                          shivdarshantourtravels@gmail.com
                         </a>
                       </div>
                     </div>

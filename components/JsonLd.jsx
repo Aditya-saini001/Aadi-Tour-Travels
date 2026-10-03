@@ -17,7 +17,7 @@ export default function JsonLd() {
     ],
     description: 'Best taxi and cab service in Dehradun offering reliable outstation cabs, Chardham Yatra packages, Mussoorie sightseeing, Jolly Grant airport transfers, and Delhi NCR drops 24/7.',
     telephone: '+919762981527',
-    email: 'aaditourandtravels@gmail.com',
+    email: 'shivdarshantourtravels@gmail.com',
     priceRange: '₹₹',
     currenciesAccepted: 'INR',
     paymentAccepted: 'Cash, Credit Card, UPI, Google Pay, PhonePe, Paytm, Net Banking',
