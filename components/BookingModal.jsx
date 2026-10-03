@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { X, Send, User, Phone, MapPin, Calendar, Users, Car, MessageSquare, Clock } from 'lucide-react'
+import { X, Send, User, Phone, MapPin, Calendar, Users, Car, MessageSquare } from 'lucide-react'
 
 export default function BookingModal({ isOpen, onClose, defaultService = '' }) {
   const [form, setForm] = useState({
@@ -30,7 +30,7 @@ export default function BookingModal({ isOpen, onClose, defaultService = '' }) {
     e.preventDefault()
     const msg =
       `🚖 *New Taxi / Tour Booking Request*\n` +
-      `*Aadi Tour & Travels Dehradun*\n\n` +
+      `*Shivdarshan Tour & Travels Dehradun*\n\n` +
       `👤 *Full Name:* ${form.name}\n` +
       `📞 *Mobile Number:* ${form.phone}\n` +
       `📍 *Pick-Up Location:* ${form.pickup}\n` +
@@ -58,14 +58,17 @@ export default function BookingModal({ isOpen, onClose, defaultService = '' }) {
         </button>
 
         <div className="text-center mb-6">
+          <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-amber-400 p-0.5 shadow-md mx-auto mb-2 bg-white">
+            <img src="/images/logo.jpg" alt="Shivdarshan Logo" className="w-full h-full object-contain rounded-full" />
+          </div>
           <span className="inline-block bg-amber-100 text-amber-800 font-bold text-xs uppercase px-3 py-1 rounded-full tracking-wider mb-2">
-            Instant Booking
+            Instant Booking • Shivdarshan
           </span>
           <h2 className="text-2xl font-black text-[#0F1E35]">
             Book Your Taxi &amp; Tour Package
           </h2>
           <p className="text-gray-500 text-xs mt-1">
-            Fill the details below — your request goes directly to our 24/7 WhatsApp!
+            Fill details below — request goes directly to our 24/7 WhatsApp or Call directly!
           </p>
         </div>
 

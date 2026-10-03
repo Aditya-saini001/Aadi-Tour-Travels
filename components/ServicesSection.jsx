@@ -95,9 +95,9 @@ export default function ServicesSection({ onOpenBooking }) {
   return (
     <div>
       {/* 1. Our Popular Cab Services with Images */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="text-center max-w-2xl mx-auto mb-12 reveal">
             <h2 className="text-3xl md:text-4xl font-black text-[#0F1E35]">
               Our Popular <span className="text-[#0D9488]">Cab Services</span>
             </h2>
@@ -107,47 +107,51 @@ export default function ServicesSection({ onOpenBooking }) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {popularCabCards.map((card, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 transition-all flex flex-col justify-between group"
-              >
-                <div>
-                  <div className="h-56 w-full overflow-hidden relative">
-                    <img
-                      src={card.image}
-                      alt={card.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+            {popularCabCards.map((card, i) => {
+              const animClass = i % 3 === 0 ? 'reveal-left' : i % 3 === 1 ? 'reveal' : 'reveal-right'
+              return (
+                <div
+                  key={i}
+                  className={`bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 transition-all flex flex-col justify-between group ${animClass}`}
+                  style={{ transitionDelay: `${(i % 3) * 100}ms` }}
+                >
+                  <div>
+                    <div className="h-56 w-full overflow-hidden relative">
+                      <img
+                        src={card.image}
+                        alt={card.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="font-black text-[#0F1E35] text-lg mb-2 group-hover:text-[#0D9488] transition-colors">
+                        {card.title}
+                      </h3>
+                      <p className="text-gray-500 text-xs leading-relaxed mb-4">
+                        {card.desc}
+                      </p>
+                    </div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="font-black text-[#0F1E35] text-lg mb-2 group-hover:text-[#0D9488] transition-colors">
-                      {card.title}
-                    </h3>
-                    <p className="text-gray-500 text-xs leading-relaxed mb-4">
-                      {card.desc}
-                    </p>
-                  </div>
-                </div>
 
-                <div className="px-6 pb-6">
-                  <button
-                    onClick={() => onOpenBooking && onOpenBooking(card.dest)}
-                    className="w-full bg-[#0F766E] hover:bg-[#0D655E] text-white font-bold text-xs py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-sm hover:scale-[1.02]"
-                  >
-                    <span>Book Service Now</span>
-                  </button>
+                  <div className="px-6 pb-6">
+                    <button
+                      onClick={() => onOpenBooking && onOpenBooking(card.dest)}
+                      className="w-full bg-[#0F766E] hover:bg-[#0D655E] text-white font-bold text-xs py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-sm hover:scale-[1.02]"
+                    >
+                      <span>Book Service Now</span>
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
 
       {/* 2. All Taxi Routes From Dehradun */}
-      <section className="py-16 bg-cream/40 border-t border-gray-100">
+      <section className="py-16 bg-cream/40 border-t border-gray-100 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="text-center max-w-2xl mx-auto mb-12 reveal">
             <h2 className="text-3xl md:text-4xl font-black text-[#0F1E35]">
               All Taxi Routes <span className="text-[#0D9488]">From Dehradun</span>
             </h2>
@@ -157,25 +161,29 @@ export default function ServicesSection({ onOpenBooking }) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {quickRoutes.map((route, i) => (
-              <div
-                key={i}
-                onClick={() => onOpenBooking && onOpenBooking(route.name)}
-                className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md border-l-4 border-l-[#0D9488] border-gray-100 flex items-center justify-between cursor-pointer group transition-all"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center flex-shrink-0">
-                    <Car size={18} />
+            {quickRoutes.map((route, i) => {
+              const animClass = i % 3 === 0 ? 'reveal-left' : i % 3 === 1 ? 'reveal' : 'reveal-right'
+              return (
+                <div
+                  key={i}
+                  onClick={() => onOpenBooking && onOpenBooking(route.name)}
+                  className={`bg-white rounded-xl p-4 shadow-sm hover:shadow-md border-l-4 border-l-[#0D9488] border-gray-100 flex items-center justify-between cursor-pointer group transition-all ${animClass}`}
+                  style={{ transitionDelay: `${(i % 3) * 80}ms` }}
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center flex-shrink-0">
+                      <Car size={18} />
+                    </div>
+                    <h4 className="font-bold text-xs md:text-sm text-[#0F1E35] group-hover:text-[#0D9488] transition-colors">
+                      {route.name}
+                    </h4>
                   </div>
-                  <h4 className="font-bold text-xs md:text-sm text-[#0F1E35] group-hover:text-[#0D9488] transition-colors">
-                    {route.name}
-                  </h4>
+                  <span className="text-xs font-bold text-[#0D9488] flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                    Book &rarr;
+                  </span>
                 </div>
-                <span className="text-xs font-bold text-[#0D9488] flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                  Book &rarr;
-                </span>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>

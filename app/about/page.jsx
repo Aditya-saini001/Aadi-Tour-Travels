@@ -27,7 +27,7 @@ export default function AboutPage() {
               Our Journey &amp; Values
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mt-3 mb-3">
-              About <span className="text-amber-400">Aadi Tour &amp; Travels</span>
+              About <span className="text-amber-400">Shivdarshan Tour &amp; Travels</span>
             </h1>
             <p className="text-cream/80 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
               Leading taxi and travel agency based in Dehradun, providing top-notch car rentals, outstation trips, and spiritual pilgrimage tours across Uttarakhand.

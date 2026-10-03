@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Heart } from 'lucide-react'
+import { Phone, Mail, MapPin } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Footer() {
@@ -7,15 +7,17 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand Info */}
-          <div>
+          <div className="reveal-left">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-400 to-yellow-200 p-0.5 shadow-md flex items-center justify-center">
-                <div className="w-full h-full rounded-full bg-[#0F1E35] flex items-center justify-center">
-                  <span className="text-xs font-black text-amber-400">AADI</span>
-                </div>
+              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400 p-0.5 shadow-md flex items-center justify-center bg-white flex-shrink-0">
+                <img
+                  src="/images/logo.jpg"
+                  alt="Shivdarshan Tour & Travels"
+                  className="w-full h-full object-contain rounded-full"
+                />
               </div>
               <div>
-                <h3 className="text-white font-black text-lg">Aadi Tour &amp; Travels</h3>
+                <h3 className="text-white font-black text-lg">Shivdarshan Tour &amp; Travels</h3>
                 <p className="text-amber-400 text-xs font-semibold">Taxi Service Dehradun, Uttarakhand</p>
               </div>
             </div>
@@ -68,19 +70,6 @@ export default function Footer() {
                   </svg>
                 </a>
 
-                {/* YouTube */}
-                <a
-                  href="https://youtube.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="YouTube"
-                  className="w-10 h-10 rounded-full bg-[#FF0000] flex items-center justify-center text-white shadow-md hover:scale-110 transition-transform"
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                  </svg>
-                </a>
-
                 {/* WhatsApp Direct */}
                 <a
                   href="https://wa.me/917819909454"
@@ -98,7 +87,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Routes */}
-          <div>
+          <div className="reveal">
             <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-4 border-l-2 border-amber-400 pl-2">
               Popular Routes
             </h4>
@@ -113,7 +102,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Details */}
-          <div>
+          <div className="reveal-right">
             <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-4 border-l-2 border-amber-400 pl-2">
               Contact Us
             </h4>
@@ -147,7 +136,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-cream/50 gap-2">
-          <span>&copy; 2026 Aadi Tour &amp; Travels. All rights reserved.</span>
+          <span>&copy; 2026 Shivdarshan Tour &amp; Travels. All rights reserved.</span>
           <span>Designed with care for seamless Uttarakhand travel.</span>
         </div>
       </div>

@@ -2,18 +2,21 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import FloatingButtons from '@/components/FloatingButtons'
 import JsonLd from '@/components/JsonLd'
+import AnimationObserver from '@/components/AnimationObserver'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   metadataBase: new URL('https://aadi-tour-travels.vercel.app'),
   title: {
-    default: 'Aadi Tour & Travels | Best Taxi Service in Dehradun & Uttarakhand',
-    template: '%s | Aadi Tour & Travels Dehradun',
+    default: 'Shivdarshan Tour & Travels | Best Taxi Service in Dehradun & Uttarakhand',
+    template: '%s | Shivdarshan Tour & Travels Dehradun',
   },
   description:
     'Best taxi service in Dehradun! Book affordable outstation cabs, Chardham Yatra packages (Kedarnath, Badrinath), Mussoorie sightseeing, Jolly Grant airport transfers, Saharanpur & Delhi NCR cabs 24/7. Call: +91 78199 09454.',
   keywords: [
+    'shivdarshan tour and travels',
+    'shivdarshan taxi service',
     'taxi service in dehradun',
     'cab service dehradun',
     'best taxi in dehradun',
@@ -32,13 +35,15 @@ export const metadata = {
     'dehradun airport pickup drop',
     'outstation cab dehradun',
     'innova crysta rental dehradun',
-    'tempo traveller in dehradun',
-    'aadi tour travels',
-    'aadi taxi service'
+    'tempo traveller in dehradun'
   ],
-  authors: [{ name: 'Aadi Tour & Travels', url: 'https://aadi-tour-travels.vercel.app' }],
-  creator: 'Aadi Tour & Travels',
-  publisher: 'Aadi Tour & Travels',
+  authors: [{ name: 'Shivdarshan Tour & Travels', url: 'https://aadi-tour-travels.vercel.app' }],
+  creator: 'Shivdarshan Tour & Travels',
+  publisher: 'Shivdarshan Tour & Travels',
+  icons: {
+    icon: '/images/logo.jpg',
+    apple: '/images/logo.jpg',
+  },
   formatDetection: {
     email: false,
     address: false,
@@ -48,23 +53,23 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Aadi Tour & Travels | Best Taxi & Tour Service in Dehradun',
+    title: 'Shivdarshan Tour & Travels | Best Taxi & Tour Service in Dehradun',
     description:
       'Fast, reliable, and affordable taxi services in Dehradun. 24/7 available for Chardham Yatra, Mussoorie, Delhi Airport, Haridwar, Rishikesh & Saharanpur. Call +91 78199 09454.',
     url: 'https://aadi-tour-travels.vercel.app',
-    siteName: 'Aadi Tour & Travels Dehradun',
+    siteName: 'Shivdarshan Tour & Travels Dehradun',
     images: [
+      {
+        url: '/images/logo.jpg',
+        width: 1024,
+        height: 1024,
+        alt: 'Shivdarshan Tour & Travels Logo',
+      },
       {
         url: '/images/kedarnath.jpg',
         width: 1200,
         height: 630,
-        alt: 'Aadi Tour & Travels Dehradun Taxi Service & Chardham Yatra',
-      },
-      {
-        url: '/images/delhi.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Dehradun to Delhi Taxi Service - Aadi Tour & Travels',
+        alt: 'Shivdarshan Tour & Travels Kedarnath Yatra',
       },
     ],
     locale: 'en_IN',
@@ -72,10 +77,10 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aadi Tour & Travels | Best Taxi Service in Dehradun',
+    title: 'Shivdarshan Tour & Travels | Best Taxi Service in Dehradun',
     description:
       'Book 24/7 Dehradun cabs for Chardham Yatra, Delhi Airport, Mussoorie, Saharanpur & Haridwar. Call +91 78199 09454.',
-    images: ['/images/kedarnath.jpg'],
+    images: ['/images/logo.jpg'],
   },
   robots: {
     index: true,
@@ -111,6 +116,7 @@ export default function RootLayout({ children }) {
         <meta name="ICBM" content="30.3165, 78.0322" />
       </head>
       <body className={`${inter.className} bg-white text-gray-900 min-h-screen flex flex-col justify-between`}>
+        <AnimationObserver />
         {children}
         <FloatingButtons />
       </body>

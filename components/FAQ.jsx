@@ -4,8 +4,8 @@ import { ChevronDown } from 'lucide-react'
 
 const faqs = [
   {
-    q: 'How can I book a taxi with Aadi Tour & Travels?',
-    a: 'You can book instantly by clicking any "Book Now" button on our website (which connects directly to WhatsApp), calling our 24/7 hotline at +91 78199 09454, or filling out the quick booking form.',
+    q: 'How can I book a taxi with Shivdarshan Tour & Travels?',
+    a: 'You can book instantly by clicking any "Call Now" or "Book Service" button on our website (which connects directly to WhatsApp or calls +91 78199 09454), or by filling out our quick booking form.',
   },
   {
     q: 'Do you provide one-way and round-trip outstation cabs?',
@@ -33,23 +33,24 @@ export default function FAQ() {
   const [open, setOpen] = useState(0)
 
   return (
-    <section className="py-20 bg-cream">
+    <section className="py-20 bg-cream overflow-hidden">
       <div className="container mx-auto px-4 max-w-3xl">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 reveal">
           <span className="text-gold text-xs font-bold uppercase tracking-widest bg-gold/10 px-3.5 py-1.5 rounded-full border border-gold/20">
             Got Questions?
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-navy mt-3 mb-2">
             Frequently Asked Questions
           </h2>
-          <p className="text-gray-500 text-xs">Everything you need to know about our taxi & tour services in Dehradun.</p>
+          <p className="text-gray-500 text-xs">Everything you need to know about Shivdarshan taxi &amp; tour services in Dehradun.</p>
         </div>
 
         <div className="space-y-3">
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm transition-all"
+              className="reveal bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm transition-all"
+              style={{ transitionDelay: `${idx * 80}ms` }}
             >
               <button
                 className="w-full flex items-center justify-between p-4 md:p-5 text-left gap-4 font-bold text-navy text-sm md:text-base hover:text-gold transition-colors"

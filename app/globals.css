@@ -20,4 +20,56 @@ html {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-8px); }
   }
+
+  .animate-pulse-slow {
+    animation: pulseSlow 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  @keyframes pulseSlow {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.85; transform: scale(1.03); }
+  }
 }
+
+/* Scroll & Entrance Animation Utility Classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-down {
+  opacity: 0;
+  transform: translateY(-35px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.active,
+.reveal-left.active,
+.reveal-right.active,
+.reveal-down.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Stagger delay helpers */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }

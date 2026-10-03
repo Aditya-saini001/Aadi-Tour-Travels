@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import BookingModal from '@/components/BookingModal'
-import { Shield, MapPin, Clock, Users, ArrowRight, CheckCircle2 } from 'lucide-react'
+import { ArrowRight, CheckCircle2 } from 'lucide-react'
 
 export const yatraCards = [
   {
@@ -70,7 +70,7 @@ export default function ChardhamPage() {
               Devbhoomi Uttarakhand Holy Pilgrimage
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mt-3 mb-3">
-              Book Sacred <span className="text-[#0D9488]">Yatra Taxi Packages</span>
+              Shivdarshan Sacred <span className="text-[#0D9488]">Yatra Taxi Packages</span>
             </h1>
             <p className="text-cream/80 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
               Travel with complete peace of mind. Well-maintained mountain vehicles (Sedan, Ertiga, Innova Crysta, Tempo Traveller) with verified local chauffeurs.
@@ -79,54 +79,58 @@ export default function ChardhamPage() {
         </section>
 
         {/* Yatra Packages Grid */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white overflow-hidden">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {yatraCards.map((card, i) => (
-                <div
-                  key={i}
-                  className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl border border-gray-100 transition-all flex flex-col justify-between group"
-                >
-                  <div>
-                    <div className="h-56 w-full overflow-hidden relative">
-                      <img
-                        src={card.image}
-                        alt={card.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <span className="absolute top-3 right-3 bg-amber-500 text-navy font-black text-[10px] px-2.5 py-1 rounded-full shadow-md">
-                        {card.duration}
-                      </span>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {yatraCards.map((card, i) => {
+                const animClass = i % 3 === 0 ? 'reveal-left' : i % 3 === 1 ? 'reveal' : 'reveal-right'
+                return (
+                  <div
+                    key={i}
+                    className={`bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl border border-gray-100 transition-all flex flex-col justify-between group ${animClass}`}
+                    style={{ transitionDelay: `${(i % 3) * 100}ms` }}
+                  >
+                    <div>
+                      <div className="h-56 w-full overflow-hidden relative">
+                        <img
+                          src={card.image}
+                          alt={card.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <span className="absolute top-3 right-3 bg-amber-500 text-navy font-black text-[10px] px-2.5 py-1 rounded-full shadow-md">
+                          {card.duration}
+                        </span>
+                      </div>
+                      <div className="p-5">
+                        <h3 className="font-black text-[#0F1E35] text-base mb-2 group-hover:text-[#0D9488] transition-colors">
+                          {card.title}
+                        </h3>
+                        <p className="text-gray-500 text-xs leading-relaxed mb-4">
+                          {card.desc}
+                        </p>
+                      </div>
                     </div>
-                    <div className="p-5">
-                      <h3 className="font-black text-[#0F1E35] text-base mb-2 group-hover:text-[#0D9488] transition-colors">
-                        {card.title}
-                      </h3>
-                      <p className="text-gray-500 text-xs leading-relaxed mb-4">
-                        {card.desc}
-                      </p>
-                    </div>
-                  </div>
 
-                  <div className="px-5 pb-5">
-                    <button
-                      onClick={() => handleOpenBooking(card.package)}
-                      className="w-full bg-[#0F766E] hover:bg-[#0D655E] text-white font-bold text-xs py-2.5 px-4 rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-sm hover:scale-[1.02]"
-                    >
-                      <span>Book Package Now</span>
-                      <ArrowRight size={13} />
-                    </button>
+                    <div className="px-5 pb-5">
+                      <button
+                        onClick={() => handleOpenBooking(card.package)}
+                        className="w-full bg-[#0F766E] hover:bg-[#0D655E] text-white font-bold text-xs py-2.5 px-4 rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-sm hover:scale-[1.02]"
+                      >
+                        <span>Book Package Now</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           </div>
         </section>
 
         {/* Inclusions & Highlights */}
-        <section className="py-16 bg-cream/40 border-t border-gray-200">
+        <section className="py-16 bg-cream/40 border-t border-gray-200 overflow-hidden">
           <div className="container mx-auto px-4 max-w-4xl">
-            <div className="text-center mb-10">
+            <div className="text-center mb-10 reveal">
               <h2 className="text-2xl md:text-3xl font-black text-[#0F1E35]">
                 What is Included in Our Yatra Packages?
               </h2>
@@ -142,7 +146,7 @@ export default function ChardhamPage() {
                 'Emergency 24/7 Breakdown & Route Helpline',
                 'Helicopter & Biometric Registration Guidance',
               ].map((inc, idx) => (
-                <div key={idx} className="flex items-center gap-3 bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
+                <div key={idx} className="reveal flex items-center gap-3 bg-white p-4 rounded-xl border border-gray-100 shadow-sm" style={{ transitionDelay: `${idx * 70}ms` }}>
                   <CheckCircle2 size={18} className="text-green-600 flex-shrink-0" />
                   <span className="text-xs font-semibold text-gray-700">{inc}</span>
                 </div>

@@ -3,15 +3,17 @@ export default function JsonLd() {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     '@id': 'https://aadi-tour-travels.vercel.app/#business',
-    name: 'Aadi Tour & Travels',
-    alternateName: ['Aadi Taxi Service Dehradun', 'Aadi Tour and Travels', 'Aadi Cabs Dehradun'],
+    name: 'Shivdarshan Tour & Travels',
+    alternateName: ['Shivdarshan Taxi Service Dehradun', 'Shivdarshan Tour and Travels', 'Shivdarshan Cabs Dehradun'],
     url: 'https://aadi-tour-travels.vercel.app',
-    logo: 'https://aadi-tour-travels.vercel.app/images/delhi.jpg',
+    logo: 'https://aadi-tour-travels.vercel.app/images/logo.jpg',
     image: [
       'https://aadi-tour-travels.vercel.app/images/kedarnath.jpg',
       'https://aadi-tour-travels.vercel.app/images/mussoorie.jpg',
       'https://aadi-tour-travels.vercel.app/images/haridwar.jpg',
-      'https://aadi-tour-travels.vercel.app/images/saharanpur.jpg'
+      'https://aadi-tour-travels.vercel.app/images/dhanaulti.jpg',
+      'https://aadi-tour-travels.vercel.app/images/paontasahib.webp',
+      'https://aadi-tour-travels.vercel.app/images/chandigarh.jpg'
     ],
     description: 'Best taxi and cab service in Dehradun offering reliable outstation cabs, Chardham Yatra packages, Mussoorie sightseeing, Jolly Grant airport transfers, and Delhi NCR drops 24/7.',
     telephone: '+917819909454',
@@ -123,7 +125,7 @@ export default function JsonLd() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'How can I book a taxi with Aadi Tour & Travels in Dehradun?',
+        name: 'How can I book a taxi with Shivdarshan Tour & Travels in Dehradun?',
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'You can book a taxi instantly by calling our 24/7 hotline at +91 78199 09454, booking on WhatsApp, or filling out the quick online booking form on our website.'

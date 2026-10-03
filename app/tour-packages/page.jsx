@@ -73,58 +73,62 @@ export default function TourPackagesPage() {
               Top Holiday Packages <span className="text-[#0D9488]">From Dehradun</span>
             </h1>
             <p className="text-cream/80 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
-              Discover the beauty of Devbhoomi Uttarakhand with Aadi Tour &amp; Travels. Custom itineraries, comfortable cabs, and verified drivers.
+              Discover the beauty of Devbhoomi Uttarakhand with Shivdarshan Tour &amp; Travels. Custom itineraries, comfortable cabs, and verified drivers.
             </p>
           </div>
         </section>
 
         {/* Packages Grid */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {holidayPackages.map((pkg, i) => (
-                <div
-                  key={i}
-                  className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl border border-gray-100 transition-all flex flex-col justify-between group"
-                >
-                  <div>
-                    <div className="h-56 w-full overflow-hidden relative">
-                      <img
-                        src={pkg.image}
-                        alt={pkg.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <span className="absolute top-3 left-3 bg-amber-500 text-navy font-black text-xs px-3 py-1 rounded-full shadow-md">
-                        {pkg.badge}
-                      </span>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="font-black text-[#0F1E35] text-lg mb-3 group-hover:text-[#0D9488] transition-colors">
-                        {pkg.title}
-                      </h3>
+              {holidayPackages.map((pkg, i) => {
+                const animClass = i % 3 === 0 ? 'reveal-left' : i % 3 === 1 ? 'reveal' : 'reveal-right'
+                return (
+                  <div
+                    key={i}
+                    className={`bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl border border-gray-100 transition-all flex flex-col justify-between group ${animClass}`}
+                    style={{ transitionDelay: `${(i % 3) * 100}ms` }}
+                  >
+                    <div>
+                      <div className="h-56 w-full overflow-hidden relative">
+                        <img
+                          src={pkg.image}
+                          alt={pkg.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <span className="absolute top-3 left-3 bg-amber-500 text-navy font-black text-xs px-3 py-1 rounded-full shadow-md">
+                          {pkg.badge}
+                        </span>
+                      </div>
+                      <div className="p-6">
+                        <h3 className="font-black text-[#0F1E35] text-lg mb-3 group-hover:text-[#0D9488] transition-colors">
+                          {pkg.title}
+                        </h3>
 
-                      <div className="space-y-2 mb-4">
-                        {pkg.points.map((pt, idx) => (
-                          <div key={idx} className="flex items-center gap-2 text-xs text-gray-600">
-                            <CheckCircle2 size={13} className="text-green-600 flex-shrink-0" />
-                            <span>{pt}</span>
-                          </div>
-                        ))}
+                        <div className="space-y-2 mb-4">
+                          {pkg.points.map((pt, idx) => (
+                            <div key={idx} className="flex items-center gap-2 text-xs text-gray-600">
+                              <CheckCircle2 size={13} className="text-green-600 flex-shrink-0" />
+                              <span>{pt}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div className="px-6 pb-6">
-                    <button
-                      onClick={() => handleOpenBooking(pkg.package)}
-                      className="w-full bg-[#0F766E] hover:bg-[#0D655E] text-white font-bold text-xs py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-sm hover:scale-[1.02]"
-                    >
-                      <span>Book Package Now</span>
-                      <ArrowRight size={13} />
-                    </button>
+                    <div className="px-6 pb-6">
+                      <button
+                        onClick={() => handleOpenBooking(pkg.package)}
+                        className="w-full bg-[#0F766E] hover:bg-[#0D655E] text-white font-bold text-xs py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-sm hover:scale-[1.02]"
+                      >
+                        <span>Book Package Now</span>
+                        <ArrowRight size={13} />
+                      </button>
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           </div>
         </section>

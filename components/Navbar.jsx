@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Home, Info, Car, Mountain, Briefcase, Phone, Menu, X } from 'lucide-react'
@@ -41,15 +41,16 @@ export default function Navbar({ onOpenBooking }) {
         <div className="flex items-center justify-between h-20">
           {/* Circular Logo & Name */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-amber-400 to-yellow-200 p-0.5 shadow-lg group-hover:scale-105 transition-transform flex-shrink-0">
-              <div className="w-full h-full rounded-full flex flex-col items-center justify-center text-center" style={{ backgroundColor: '#0F1E35' }}>
-                <Car size={18} className="text-amber-400" />
-                <span className="text-[7px] font-black uppercase text-amber-300 leading-none mt-0.5">AADI</span>
-              </div>
+            <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-amber-400 p-0.5 shadow-lg group-hover:scale-105 transition-transform flex-shrink-0 bg-white">
+              <img
+                src="/images/logo.jpg"
+                alt="Shivdarshan Tour & Travels Logo"
+                className="w-full h-full object-contain rounded-full"
+              />
             </div>
             <div className="flex flex-col">
               <span className="text-white font-black text-lg md:text-xl tracking-wide group-hover:text-amber-400 transition-colors">
-                Aadi Tour &amp; Travels
+                Shivdarshan Tour &amp; Travels
               </span>
               <span className="text-amber-400 text-[11px] font-bold tracking-wider uppercase">
                 Taxi Service Dehradun

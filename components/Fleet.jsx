@@ -46,9 +46,9 @@ const fleetData = [
 
 export default function Fleet({ onOpenBooking }) {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-2xl mx-auto mb-14">
+        <div className="text-center max-w-2xl mx-auto mb-14 reveal">
           <span className="text-gold text-xs font-bold uppercase tracking-widest bg-gold/10 px-3.5 py-1.5 rounded-full border border-gold/20">
             Our Maintained Fleet
           </span>
@@ -61,11 +61,14 @@ export default function Fleet({ onOpenBooking }) {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {fleetData.map((car, idx) => (
-            <div
-              key={idx}
-              className="bg-cream/40 rounded-2xl overflow-hidden border border-gray-200 hover:border-gold/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
-            >
+          {fleetData.map((car, idx) => {
+            const animClass = idx % 2 === 0 ? 'reveal-left' : 'reveal-right'
+            return (
+              <div
+                key={idx}
+                className={`bg-cream/40 rounded-2xl overflow-hidden border border-gray-200 hover:border-gold/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group ${animClass}`}
+                style={{ transitionDelay: `${idx * 100}ms` }}
+              >
               <div className="relative h-44 w-full overflow-hidden">
                 <img
                   src={car.image}
