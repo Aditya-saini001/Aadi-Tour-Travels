@@ -1,6 +1,6 @@
-# Aadi Tour & Travels
+# Shivdarshan Tour & Travels
 
-A modern, professional taxi/tour service website for **Aadi Tour & Travels**, Dehradun, Uttarakhand.
+A modern, professional taxi/tour service website for **Shivdarshan Tour & Travels**, Dehradun, Uttarakhand.
 
 Built with **Next.js 14** + **Tailwind CSS** + **TypeScript**.
 
