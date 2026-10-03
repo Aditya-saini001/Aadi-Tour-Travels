@@ -49,10 +49,10 @@ export default function Fleet({ onOpenBooking }) {
     <section className="py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-14 reveal">
-          <span className="text-gold text-xs font-bold uppercase tracking-widest bg-gold/10 px-3.5 py-1.5 rounded-full border border-gold/20">
+          <span className="text-[#0D9488] text-xs font-bold uppercase tracking-widest bg-teal-50 px-3.5 py-1.5 rounded-full border border-teal-200">
             Our Maintained Fleet
           </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-navy mt-3 mb-3">
+          <h2 className="text-3xl md:text-4xl font-black text-[#0F1E35] mt-3 mb-3">
             Choose Your Travel Vehicle
           </h2>
           <p className="text-gray-600 text-sm">
@@ -66,62 +66,63 @@ export default function Fleet({ onOpenBooking }) {
             return (
               <div
                 key={idx}
-                className={`bg-cream/40 rounded-2xl overflow-hidden border border-gray-200 hover:border-gold/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group ${animClass}`}
+                className={`bg-cream/40 rounded-2xl overflow-hidden border border-gray-200 hover:border-amber-400/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group ${animClass}`}
                 style={{ transitionDelay: `${idx * 100}ms` }}
               >
-              <div className="relative h-44 w-full overflow-hidden">
-                <img
-                  src={car.image}
-                  alt={car.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <span className="absolute top-2 left-2 bg-navy text-gold font-bold text-[10px] px-2.5 py-1 rounded-md">
-                  {car.category}
-                </span>
-              </div>
-
-              <div className="p-5 flex-1 flex flex-col justify-between">
-                <div>
-                  <h3 className="font-extrabold text-navy text-base mb-2">{car.name}</h3>
-
-                  <div className="grid grid-cols-2 gap-2 text-[11px] text-gray-600 mb-3 bg-white p-2.5 rounded-lg border border-gray-100">
-                    <span className="flex items-center gap-1">
-                      <Users size={12} className="text-gold" /> {car.passengers}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Briefcase size={12} className="text-gold" /> {car.luggage}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Wind size={12} className="text-gold" /> {car.ac}
-                    </span>
-                    <span className="flex items-center gap-1 text-green-700 font-bold">
-                      <Shield size={12} /> Sanitized
-                    </span>
-                  </div>
-
-                  <div className="space-y-1 mb-4">
-                    {car.features.map((f, i) => (
-                      <div key={i} className="flex items-center gap-1.5 text-[11px] text-gray-500">
-                        <CheckCircle2 size={11} className="text-green-600 flex-shrink-0" />
-                        <span>{f}</span>
-                      </div>
-                    ))}
-                  </div>
+                <div className="relative h-44 w-full overflow-hidden">
+                  <img
+                    src={car.image}
+                    alt={car.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <span className="absolute top-2 left-2 bg-[#0F1E35] text-amber-400 font-bold text-[10px] px-2.5 py-1 rounded-md">
+                    {car.category}
+                  </span>
                 </div>
 
-                <div className="pt-3 border-t border-gray-200 flex items-center justify-between">
-                  <span className="text-xs font-black text-navy">{car.rate}</span>
-                  <button
-                    onClick={() => onOpenBooking && onOpenBooking(car.name)}
-                    className="bg-navy hover:bg-gold hover:text-navy text-white text-xs font-bold px-3.5 py-2 rounded-lg transition-colors flex items-center gap-1"
-                  >
-                    <span>Book</span>
-                    <ArrowRight size={12} />
-                  </button>
+                <div className="p-5 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3 className="font-black text-[#0F1E35] text-base mb-2">{car.name}</h3>
+
+                    <div className="grid grid-cols-2 gap-2 text-[11px] text-gray-600 mb-3 bg-white p-2.5 rounded-lg border border-gray-100">
+                      <span className="flex items-center gap-1">
+                        <Users size={12} className="text-amber-500" /> {car.passengers}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Briefcase size={12} className="text-amber-500" /> {car.luggage}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Wind size={12} className="text-amber-500" /> {car.ac}
+                      </span>
+                      <span className="flex items-center gap-1 text-green-700 font-bold">
+                        <Shield size={12} /> Sanitized
+                      </span>
+                    </div>
+
+                    <div className="space-y-1 mb-4">
+                      {car.features.map((f, i) => (
+                        <div key={i} className="flex items-center gap-1.5 text-[11px] text-gray-500">
+                          <CheckCircle2 size={11} className="text-green-600 flex-shrink-0" />
+                          <span>{f}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="pt-3 border-t border-gray-200 flex items-center justify-between">
+                    <span className="text-xs font-black text-[#0F1E35]">{car.rate}</span>
+                    <button
+                      onClick={() => onOpenBooking && onOpenBooking(car.name)}
+                      className="bg-[#0F1E35] hover:bg-amber-500 hover:text-[#0F1E35] text-white text-xs font-bold px-3.5 py-2 rounded-lg transition-colors flex items-center gap-1"
+                    >
+                      <span>Book</span>
+                      <ArrowRight size={12} />
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>
