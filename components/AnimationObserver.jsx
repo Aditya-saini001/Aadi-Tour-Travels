@@ -6,7 +6,16 @@ export default function AnimationObserver() {
   const pathname = usePathname()
 
   useEffect(() => {
-    const observerCallback = (entries, observer) => {
+    if (typeof window === 'undefined' || typeof document === 'undefined') return
+
+    // Immediately reveal elements if IntersectionObserver is not supported
+    if (!('IntersectionObserver' in window)) {
+      const elements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-down')
+      elements.forEach((el) => el.classList.add('active'))
+      return
+    }
+
+    const observerCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active')
@@ -15,8 +24,8 @@ export default function AnimationObserver() {
     }
 
     const observer = new IntersectionObserver(observerCallback, {
-      threshold: 0.12,
-      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.1,
+      rootMargin: '0px 0px -20px 0px',
     })
 
     const elements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-down')

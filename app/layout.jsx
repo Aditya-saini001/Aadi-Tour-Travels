@@ -107,15 +107,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <JsonLd />
-        <link rel="canonical" href="https://aadi-tour-travels.vercel.app" />
-        <meta name="geo.region" content="IN-UT" />
-        <meta name="geo.placename" content="Dehradun" />
-        <meta name="geo.position" content="30.3165;78.0322" />
-        <meta name="ICBM" content="30.3165, 78.0322" />
-      </head>
       <body className={`${inter.className} bg-white text-gray-900 min-h-screen flex flex-col justify-between`}>
+        <JsonLd />
         <AnimationObserver />
         {children}
         <FloatingButtons />
