@@ -13,7 +13,7 @@ export const metadata = {
     template: '%s | Shivdarshan Tour & Travels Dehradun',
   },
   description:
-    'Best taxi service in Dehradun! Book affordable outstation cabs, Chardham Yatra packages (Kedarnath, Badrinath), Mussoorie sightseeing, Jolly Grant airport transfers, Saharanpur & Delhi NCR cabs 24/7. Call: +91 78199 09454.',
+    'Best taxi service in Dehradun! Book affordable outstation cabs, Chardham Yatra packages (Kedarnath, Badrinath), Mussoorie sightseeing, Jolly Grant airport transfers, Saharanpur & Delhi NCR cabs 24/7. Call: +91 97629 81527.',
   keywords: [
     'shivdarshan tour and travels',
     'shivdarshan taxi service',
@@ -55,7 +55,7 @@ export const metadata = {
   openGraph: {
     title: 'Shivdarshan Tour & Travels | Best Taxi & Tour Service in Dehradun',
     description:
-      'Fast, reliable, and affordable taxi services in Dehradun. 24/7 available for Chardham Yatra, Mussoorie, Delhi Airport, Haridwar, Rishikesh & Saharanpur. Call +91 78199 09454.',
+      'Fast, reliable, and affordable taxi services in Dehradun. 24/7 available for Chardham Yatra, Mussoorie, Delhi Airport, Haridwar, Rishikesh & Saharanpur. Call +91 97629 81527.',
     url: 'https://aadi-tour-travels.vercel.app',
     siteName: 'Shivdarshan Tour & Travels Dehradun',
     images: [
@@ -79,7 +79,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Shivdarshan Tour & Travels | Best Taxi Service in Dehradun',
     description:
-      'Book 24/7 Dehradun cabs for Chardham Yatra, Delhi Airport, Mussoorie, Saharanpur & Haridwar. Call +91 78199 09454.',
+      'Book 24/7 Dehradun cabs for Chardham Yatra, Delhi Airport, Mussoorie, Saharanpur & Haridwar. Call +91 97629 81527.',
     images: ['/images/logo.jpg'],
   },
   robots: {

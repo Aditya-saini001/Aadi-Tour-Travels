@@ -36,7 +36,7 @@ export default function Hero({ onOpenBooking }) {
         {/* Hero Action Buttons */}
         <div className="reveal active delay-300 flex flex-wrap items-center justify-center gap-4 pt-4">
           <a
-            href="tel:7819909454"
+            href="tel:9762981527"
             className="flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold px-7 py-3.5 rounded-xl text-sm md:text-base shadow-xl hover:scale-105 transition-all"
           >
             <Phone size={18} />

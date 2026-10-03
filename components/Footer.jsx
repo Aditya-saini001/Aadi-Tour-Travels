@@ -72,7 +72,7 @@ export default function Footer() {
 
                 {/* WhatsApp Direct */}
                 <a
-                  href="https://wa.me/917819909454"
+                  href="https://wa.me/919762981527"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="WhatsApp"
@@ -109,12 +109,12 @@ export default function Footer() {
             <ul className="space-y-3 text-xs">
               <li className="flex items-start gap-2.5">
                 <MapPin size={15} className="text-amber-400 flex-shrink-0 mt-0.5" />
-                <span>Dehradun, Uttarakhand — 248001</span>
+                <span>Subhash Nagar, Sewla khurd, Dehradun, Uttarakhand 248002</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone size={15} className="text-amber-400 flex-shrink-0" />
-                <a href="tel:7819909454" className="text-white font-bold hover:text-amber-400 transition-colors">
-                  +91 78199 09454
+                <a href="tel:9762981527" className="text-white font-bold hover:text-amber-400 transition-colors">
+                  +91 97629 81527
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
@@ -127,8 +127,8 @@ export default function Footer() {
 
             <div className="mt-5 p-3.5 bg-white/5 rounded-xl border border-white/10">
               <p className="text-[11px] text-amber-400 font-bold uppercase">24/7 Booking Helpline</p>
-              <a href="tel:7819909454" className="text-base font-black text-white hover:text-amber-400 transition-colors">
-                +91 78199 09454
+              <a href="tel:9762981527" className="text-base font-black text-white hover:text-amber-400 transition-colors">
+                +91 97629 81527
               </a>
             </div>
           </div>

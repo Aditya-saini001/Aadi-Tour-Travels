@@ -16,17 +16,17 @@ export default function JsonLd() {
       'https://aadi-tour-travels.vercel.app/images/chandigarh.jpg'
     ],
     description: 'Best taxi and cab service in Dehradun offering reliable outstation cabs, Chardham Yatra packages, Mussoorie sightseeing, Jolly Grant airport transfers, and Delhi NCR drops 24/7.',
-    telephone: '+917819909454',
+    telephone: '+919762981527',
     email: 'aaditourandtravels@gmail.com',
     priceRange: '₹₹',
     currenciesAccepted: 'INR',
     paymentAccepted: 'Cash, Credit Card, UPI, Google Pay, PhonePe, Paytm, Net Banking',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Near Railway Station & Clock Tower',
+      streetAddress: 'Subhash Nagar, Sewla khurd',
       addressLocality: 'Dehradun',
       addressRegion: 'Uttarakhand',
-      postalCode: '248001',
+      postalCode: '248002',
       addressCountry: 'IN'
     },
     geo: {
@@ -128,7 +128,7 @@ export default function JsonLd() {
         name: 'How can I book a taxi with Shivdarshan Tour & Travels in Dehradun?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'You can book a taxi instantly by calling our 24/7 hotline at +91 78199 09454, booking on WhatsApp, or filling out the quick online booking form on our website.'
+          text: 'You can book a taxi instantly by calling our 24/7 hotline at +91 97629 81527, booking on WhatsApp, or filling out the quick online booking form on our website.'
         }
       },
       {

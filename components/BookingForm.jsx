@@ -33,7 +33,7 @@ export default function BookingForm({ initialDestination = '' }) {
       (form.message ? `📝 *Vehicle Preference / Note:* ${form.message}\n` : '') +
       `\n_Please confirm availability and share best fare quote._`
 
-    const url = `https://wa.me/917819909454?text=${encodeURIComponent(msg)}`
+    const url = `https://wa.me/919762981527?text=${encodeURIComponent(msg)}`
     window.open(url, '_blank')
   }
 
@@ -178,11 +178,11 @@ export default function BookingForm({ initialDestination = '' }) {
             <span>Send on WhatsApp</span>
           </button>
           <a
-            href="tel:7819909454"
+            href="tel:9762981527"
             className="flex-1 bg-red-600 hover:bg-red-700 text-white font-black py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-200 hover:scale-[1.01] shadow-lg shadow-red-600/30 text-base text-center"
           >
             <Phone size={18} className="fill-white" />
-            <span>Direct Call: 78199 09454</span>
+            <span>Direct Call: 97629 81527</span>
           </a>
         </div>
       </form>

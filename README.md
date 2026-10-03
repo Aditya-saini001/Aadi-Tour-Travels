@@ -21,8 +21,8 @@ Deploy on Vercel to get your live link!
 - 🎨 Classical Deep Navy & Gold color scheme
 
 ## 📞 Contact
-- **Phone/WhatsApp:** +91 78199 09454
-- **Location:** Dehradun, Uttarakhand
+- **Phone/WhatsApp:** +91 97629 81527
+- **Location:** Subhash Nagar, Sewla khurd, Dehradun, Uttarakhand 248002
 
 ## 🛠️ Tech Stack
 - Next.js 14 (App Router)

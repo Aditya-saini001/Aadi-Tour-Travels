@@ -47,8 +47,8 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <p className="text-[11px] text-gray-400 uppercase font-bold">24/7 Call Hotline</p>
-                        <a href="tel:7819909454" className="text-base font-black text-[#0F1E35] hover:text-amber-600 transition-colors">
-                          +91 78199 09454
+                        <a href="tel:9762981527" className="text-base font-black text-[#0F1E35] hover:text-amber-600 transition-colors">
+                          +91 97629 81527
                         </a>
                       </div>
                     </div>
@@ -59,8 +59,8 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <p className="text-[11px] text-gray-400 uppercase font-bold">WhatsApp Direct</p>
-                        <a href="https://wa.me/917819909454" target="_blank" rel="noopener noreferrer" className="text-base font-black text-[#0F1E35] hover:text-green-600 transition-colors">
-                          +91 78199 09454
+                        <a href="https://wa.me/919762981527" target="_blank" rel="noopener noreferrer" className="text-base font-black text-[#0F1E35] hover:text-green-600 transition-colors">
+                          +91 97629 81527
                         </a>
                       </div>
                     </div>
@@ -84,7 +84,7 @@ export default function ContactPage() {
                       <div>
                         <p className="text-[11px] text-gray-400 uppercase font-bold">Office Address</p>
                         <p className="text-xs font-semibold text-gray-700">
-                          Dehradun, Uttarakhand — 248001
+                          Subhash Nagar, Sewla khurd, Dehradun, Uttarakhand 248002
                         </p>
                       </div>
                     </div>
@@ -114,11 +114,11 @@ export default function ContactPage() {
                     Call our dispatch supervisor directly for emergency pickups at Dehradun Railway Station or Jolly Grant Airport.
                   </p>
                   <a
-                    href="tel:7819909454"
+                    href="tel:9762981527"
                     className="inline-flex items-center justify-center gap-2 w-full bg-red-600 hover:bg-red-700 text-white font-black py-2.5 rounded-xl text-xs shadow-md transition-colors"
                   >
                     <Phone size={14} />
-                    <span>Call Helpline: +91 78199 09454</span>
+                    <span>Call Helpline: +91 97629 81527</span>
                   </a>
                 </div>
               </div>

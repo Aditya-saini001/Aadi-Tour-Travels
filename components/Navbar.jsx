@@ -29,9 +29,9 @@ export default function Navbar({ onOpenBooking }) {
             </span>
             <span className="text-gray-300 font-medium">Dehradun, Uttarakhand • 24/7 Available</span>
           </div>
-          <a href="tel:7819909454" className="flex items-center gap-1.5 text-amber-400 hover:text-white font-black transition-colors">
+          <a href="tel:9762981527" className="flex items-center gap-1.5 text-amber-400 hover:text-white font-black transition-colors">
             <Phone size={13} className="text-red-400 fill-red-400" />
-            <span>Call Now: +91 78199 09454</span>
+            <span>Call Now: +91 97629 81527</span>
           </a>
         </div>
       </div>
@@ -83,7 +83,7 @@ export default function Navbar({ onOpenBooking }) {
           {/* Right Glowing Call Now Button */}
           <div className="hidden sm:flex items-center gap-3">
             <a
-              href="tel:7819909454"
+              href="tel:9762981527"
               className="flex items-center gap-2 bg-gradient-to-r from-red-600 via-red-500 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-black text-sm px-6 py-2.5 rounded-full shadow-lg shadow-red-600/40 hover:scale-105 transition-all duration-200"
             >
               <Phone size={16} className="fill-white" />
@@ -137,12 +137,12 @@ export default function Navbar({ onOpenBooking }) {
               <span>Book Taxi Online</span>
             </button>
             <a
-              href="tel:7819909454"
+              href="tel:9762981527"
               className="flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold text-sm py-3 px-4 rounded-xl text-center mt-2 shadow-md"
               onClick={() => setIsOpen(false)}
             >
               <Phone size={16} />
-              <span>Call Now: +91 78199 09454</span>
+              <span>Call Now: +91 97629 81527</span>
             </a>
           </div>
         </div>

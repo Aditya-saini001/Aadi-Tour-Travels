@@ -60,8 +60,8 @@ export default function TermsModal({ isOpen, onClose }) {
             <h3 className="font-bold text-navy text-base mb-1">5. Contact &amp; Support</h3>
             <p>
               For any queries, please call or WhatsApp us at:{' '}
-              <a href="tel:7819909454" className="text-amber-600 font-bold hover:underline">
-                +91 78199 09454
+              <a href="tel:9762981527" className="text-amber-600 font-bold hover:underline">
+                +91 97629 81527
               </a>
             </p>
           </section>

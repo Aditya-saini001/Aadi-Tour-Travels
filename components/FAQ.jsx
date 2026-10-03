@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react'
 const faqs = [
   {
     q: 'How can I book a taxi with Shivdarshan Tour & Travels?',
-    a: 'You can book instantly by clicking any "Call Now" or "Book Service" button on our website (which connects directly to WhatsApp or calls +91 78199 09454), or by filling out our quick booking form.',
+    a: 'You can book instantly by clicking any "Call Now" or "Book Service" button on our website (which connects directly to WhatsApp or calls +91 97629 81527), or by filling out our quick booking form.',
   },
   {
     q: 'Do you provide one-way and round-trip outstation cabs?',
